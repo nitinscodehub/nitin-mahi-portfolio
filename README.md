@@ -35,14 +35,14 @@ npm run format
 
 ### Mahi's details
 
-Her exact tools, projects and achievements were not supplied, so nothing was invented. Her card and the projects grid show clearly-marked `TODO` placeholders instead. Fill the marked fields in `content.ts` and remove the notes when ready.
+Her five deployed builds (Portfolio, Pulse, Askly, Cartly, Flowbit) are listed in the Work section with live demos and source links. Her exact tools and achievements were not supplied, so nothing was invented — her card keeps a clearly-marked `TODO` note for those until you provide them.
 
 ## Replace the photos
 
 The originals were copied, unrenamed, into:
 
 ```
-public/images/ss.png     → Nitin (402×621, transparent background)
+public/images/n.png      → Nitin (1024×1024 portrait)
 public/images/mahi.png   → Mahi (150×150)
 ```
 
@@ -89,7 +89,7 @@ src/
 ├── styles/index.css         ← design tokens + global styles
 ├── App.tsx
 └── main.tsx
-public/images/               ← ss.png, mahi.png
+public/images/               ← n.png, mahi.png
 public/og/og-image.png
 PLAN.md                      ← design/component/animation plan
 ```

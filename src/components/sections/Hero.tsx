@@ -117,7 +117,7 @@ export default function Hero() {
                 accent="a"
                 eager
                 className="h-64 w-full rounded-3xl"
-                imgClassName="h-72 w-auto max-w-full object-contain drop-shadow-[0_20px_40px_rgba(34,211,238,0.35)] sm:h-80"
+                imgClassName="h-72 w-72 max-w-full rounded-3xl object-cover drop-shadow-[0_20px_40px_rgba(34,211,238,0.35)] sm:h-80 sm:w-80"
               />
             </div>
             <div className="relative mt-4 flex items-center justify-between gap-3">

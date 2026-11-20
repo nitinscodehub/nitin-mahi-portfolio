@@ -51,7 +51,7 @@ export const partners: Partner[] = [
     initials: "ND",
     role: "Technical Lead",
     focus: "Full-Stack · Flutter · Cybersecurity",
-    image: "/images/ss.png",
+    image: "/images/n.png",
     education: "B.Tech CSE (Cyber Security), Central University of Jammu · 2027",
     bio: "I lead the build: architecture, full-stack code, Flutter apps and security testing. I turn a rough idea into a working, secure product — then hand over clean source and a clear explanation.",
     accent: "a",
@@ -182,7 +182,7 @@ export const partners: Partner[] = [
     verify: [],
     // TODO: fill her exact tools, projects and achievements from her resume.
     // Nothing specific is invented here; placeholder items are filtered out of the UI.
-    placeholderNote: "TODO: add Mahi's exact tools, projects and achievements from her resume.",
+    placeholderNote: "TODO: add Mahi's exact tools and achievements from her resume. Her five deployed builds with live demos are already listed in the Work section.",
   },
 ];
 
@@ -381,7 +381,65 @@ export const projects: ProjectItem[] = [
     repo: "https://github.com/nitinscodehub",
     accent: "a",
   },
-  // TODO: add Mahi's projects here once supplied. Never invent them.
+];
+
+// Real, deployed builds with live proof and source code. Replaces the old TODO placeholder.
+export const mahiProjects: ProjectItem[] = [
+  {
+    id: "portfolio-front-door",
+    name: "Portfolio (front door)",
+    category: "Web",
+    tags: ["Portfolio", "Live", "Open source"],
+    summary: "Public front door for the studio and its work.",
+    detail: "The portfolio site that presents the studio, its services and its deployed projects, with a direct path to contact and Contra Joki.",
+    live: "https://portfolio-tawny-one-91.vercel.app",
+    repo: "https://github.com/nitinscodehub/portfolio",
+    accent: "b",
+  },
+  {
+    id: "pulse-analytics",
+    name: "Pulse — analytics",
+    category: "Web",
+    tags: ["Analytics", "Dashboard", "Live demo"],
+    summary: "Analytics dashboard with generated insights.",
+    detail: "An analytics dashboard with a polished UI, generated insights and an optional AI layer that falls back to deterministic local output.",
+    live: "https://pulse-analytics-three.vercel.app",
+    repo: "https://github.com/nitinscodehub/pulse-analytics",
+    accent: "b",
+  },
+  {
+    id: "askly",
+    name: "Askly — RAG assistant",
+    category: "AI-ML",
+    tags: ["RAG", "Chatbot", "SSE"],
+    summary: "Knowledge assistant with retrieval-augmented answers.",
+    detail: "A RAG-style knowledge assistant with streaming answers, local embeddings and a graceful fallback when external AI credentials are absent.",
+    live: "https://askly-kappa.vercel.app",
+    repo: "https://github.com/nitinscodehub/askly",
+    accent: "b",
+  },
+  {
+    id: "cartly",
+    name: "Cartly — commerce",
+    category: "Web",
+    tags: ["Storefront", "Cart", "Live demo"],
+    summary: "Headless storefront with a working cart flow.",
+    detail: "A headless commerce experience with product browsing, a working cart and server-side order totals — demoable without any API keys.",
+    live: "https://cartly-self.vercel.app",
+    repo: "https://github.com/nitinscodehub/cartly",
+    accent: "b",
+  },
+  {
+    id: "flowbit",
+    name: "Flowbit — automation",
+    category: "Web",
+    tags: ["Workflow", "Visual builder", "Live demo"],
+    summary: "Visual workflow builder with animated runs.",
+    detail: "A drag-and-style visual workflow builder that validates and simulates runs in topological order, with an animated execution view.",
+    live: "https://flowbit-silk.vercel.app",
+    repo: "https://github.com/nitinscodehub/flowbit",
+    accent: "b",
+  },
 ];
 
 export const achievements = [

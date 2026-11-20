@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, Code2, Plus } from "lucide-react";
+import { ArrowUpRight, Code2 } from "lucide-react";
 import { useState } from "react";
 import Modal from "@/components/ui/Modal";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { projects, type ProjectItem } from "@/data/content";
+import { mahiProjects, projects, type ProjectItem } from "@/data/content";
 import { cn, externalLink } from "@/lib/utils";
 
 const FILTERS = ["All", "Web", "App", "Security", "AI-ML"] as const;
@@ -100,12 +100,57 @@ export default function Projects() {
           </AnimatePresence>
         </motion.div>
 
-        <Reveal className="mt-6">
-          <div className="flex flex-col gap-3 rounded-3xl border border-dashed border-line p-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-b">TODO</span> · Mahi&apos;s own projects will be added here once supplied. No placeholder work is shown as real.
-            </p>
-            <Plus className="size-5 shrink-0 text-b" />
+        <Reveal className="mt-14">
+          <div className="rounded-3xl border border-b/25 bg-surface/30 p-6 sm:p-8">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-b">Mahi&apos;s builds · live proofs</p>
+                <h3 className="mt-2 font-display text-2xl font-bold">Shipped, deployed, demo-ready.</h3>
+                <p className="mt-2 text-sm text-muted">Every card below has a working live demo and public source code.</p>
+              </div>
+              <span className="w-fit rounded-full border border-b/40 px-3 py-1 font-mono text-[10px] text-b">
+                {mahiProjects.length} live demos
+              </span>
+            </div>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {mahiProjects.map((project) => (
+                <div key={project.id} className="flex flex-col rounded-2xl border border-line bg-surface p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h4 className="font-display text-base font-bold">{project.name}</h4>
+                    <span className="rounded-full bg-b/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-b">
+                      {project.category}
+                    </span>
+                  </div>
+                  <p className="mt-3 flex-1 text-xs leading-relaxed text-muted">{project.summary}</p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="rounded-full bg-surface-2 px-2.5 py-1 text-[10px] text-muted">{tag}</span>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex gap-2 border-t border-line pt-4">
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        {...externalLink()}
+                        className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-gradient-to-r from-b to-c px-4 py-2.5 text-xs font-semibold text-bg"
+                      >
+                        Live demo <ArrowUpRight className="size-3.5" />
+                      </a>
+                    ) : null}
+                    {project.repo ? (
+                      <a
+                        href={project.repo}
+                        {...externalLink()}
+                        className="inline-flex items-center justify-center gap-1.5 rounded-full border border-line px-4 py-2.5 text-xs text-muted hover:text-ink"
+                      >
+                        <Code2 className="size-3.5" /> Code
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
       </div>

@@ -41,7 +41,7 @@
 - Unverifiable claims (patent, tutorials, accuracy, CGPA) live in a `verify` array with `// VERIFY:` comments and are never displayed.
 - Nitin's phone is click-to-reveal. Contact form is env-driven (Web3Forms/Formspree) with a `mailto:` fallback and honeypot. No secrets in the repo.
 - Static SPA deploy config for both Vercel and Netlify, with security headers and SPA rewrites.
-- Photos copied from the provided folder as `public/images/ss.png` and `public/images/mahi.png`, names unchanged, with initials fallback if missing.
+- Photos copied from the provided folder as `public/images/n.png` (Nitin) and `public/images/mahi.png`, with initials fallback if missing. The first version used `ss.png`; it was replaced with the supplied `n.png`.
 - Testimonials render nothing while the data array is empty.
 
 ## Quality gates

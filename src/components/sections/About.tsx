@@ -37,7 +37,7 @@ function PartnerCard({ partner, index }: { partner: Partner; index: number }) {
                 initials={partner.initials}
                 accent={partner.accent}
                 className="size-full"
-                imgClassName={cn("size-full", isNitin ? "object-contain object-bottom" : "object-cover")}
+                imgClassName="size-full object-cover"
               />
             </div>
             <p className={cn("mt-3 font-mono text-[10px] uppercase tracking-[0.2em]", isNitin ? "text-a" : "text-b")}>

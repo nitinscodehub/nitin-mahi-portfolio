@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nitin-mahi-portfolio.vercel.app/sitemap.xml
+Sitemap: https://mntechfolio.vercel.app/sitemap.xml
