@@ -23,45 +23,7 @@ npm run typecheck
 npm run format
 ```
 
-## Edit the content (single source of truth)
 
-**All words, links, services, projects, achievements, skills and FAQs live in [`src/data/content.ts`](src/data/content.ts).** You do not need to touch components to change copy.
-
-- `STUDIO_NAME` — rename the studio in one line.
-- `CONTRA_JOKI_URL` — **TODO: replace `#` with the real profile URL.**
-- `studio` — tagline options, rotating hero roles, intro, location, email.
-- `partners` — Nitin and Mahi's bios, skills, experience, achievements, certs, links.
-- `services`, `process`, `projects`, `achievements`, `techGroups`, `whyUs`, `faqs`, `counters` — section content.
-- `testimonials` — intentionally empty. The component renders **nothing** until you add real, permissioned quotes.
-
-### VERIFY before publishing
-
-`src/data/content.ts` carries explicit `// VERIFY:` comments for claims that should not be shown until confirmed: **patent pending, 30+ tutorials, 92% accuracy, CGPA**. They are stored in `partner.verify` and are deliberately **not rendered** anywhere.
-
-### Mahi's details
-
-Her five deployed builds (Portfolio, Pulse, Askly, Cartly, Flowbit) are listed in the Work section with live demos and source links. Her exact tools and achievements were not supplied, so nothing was invented — her card keeps a clearly-marked `TODO` note for those until you provide them.
-
-## Replace the photos
-
-The originals were copied, unrenamed, into:
-
-```
-public/images/n.png      → Nitin (1024×1024 portrait)
-public/images/mahi.png   → Mahi (150×150)
-```
-
-Replace either file with the same filename. `SmartImage` falls back to a styled initials avatar (`ND` / `MP`) if an image is missing or fails to load, so the site never breaks.
-
-## Contact form setup
-
-1. Copy `.env.example` → `.env.local`.
-2. Choose one provider:
-   - **Web3Forms** — set `VITE_CONTACT_ENDPOINT=https://api.web3forms.com/submit` and `VITE_CONTACT_ACCESS_KEY=...`
-   - **Formspree** — set `VITE_CONTACT_ENDPOINT=https://formspree.io/f/...`
-3. Set `VITE_CONTACT_EMAIL` for the fallback.
-
-With **no endpoint configured**, the submit button opens a prefilled `mailto:` to `mahipriyadarshi0@gmail.com`, so the form works out of the box. Validation, a honeypot field and a provider-side rate limit note are included. **Never commit `.env.local`.**
 
 ## Deploy
 
