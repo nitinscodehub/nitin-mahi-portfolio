@@ -2,7 +2,12 @@
 
 > An animated, award-quality single-page portfolio for two engineering partners. Cyan for Nitin's technical side, rose for Mahi's client/delivery side, violet where they merge into one studio.
 
+
 Built with **Vite + React 19 + TypeScript + Tailwind CSS v4 + Framer Motion + Lenis**. No backend required.
+
+
+
+
 
 ---
 
